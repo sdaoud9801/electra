@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "lexendtera-black";
+    src: url("static/LexendTera-Black.ttf")
+}
+
+@font-face {
+    font-family: "lexendtera-regular";
+    src: url("static/LexendTera-Regular.ttf");
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #0F0606;
+    color: #FF0000;
+    font-family: "lexendtera-regular";
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* nav */
+.nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #FF0000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.nav-links-wrapper > a {
+    display: block;
+}
+
+.nav > img {
+    height: 16px;
+    width: 16px;
+    padding: 30px;  
+}
+
+.hide-mobile {
+    display: none;  
+}
+
+.nav-link, .nav-link-home {
+    text-decoration: none;
+    color: #FF0000;
+    padding: 30px;
+}
+
+.nav-link-home {
+    font-family: "lexendtera-black";
+}
+
+.nav-link {
+    align-self: flex-end;   
+}
+
+/* end of nav */
+
+.grid {
+    display: grid;
+    min-height: 90vh;
+    grid-template-rows: 200px auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+
+.header {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "lexendtera-black";
+    font-size: 2.5rem;
+}
+
+.release {
+    border-radius: 20px;
+}
+
+.release-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.release > img {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.release-name {
+    margin-top: 20px;   
+    font-family: "lexendtera-black";
+}
+
+.release-artist {
+    margin-top: 20px;
+}
+
+.release-link { 
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 580px) {
+    .header { 
+        grid-column: 1 / span 2;
+    }
+
+    .nav-link {
+        align-self: flex-end;
+    }
+
+    .nav-links-wrapper {
+        display: flex;
+        width: auto;
+    }
+
+    .hide-tablet {
+        display: none;
+    }
+
+    .show-tablet {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .header {
+        grid-column: 1 / span 3;
+    }
+}
